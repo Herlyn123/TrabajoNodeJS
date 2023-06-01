@@ -26,6 +26,7 @@ module.exports = {
 const { MongoClient } = require('mongodb');
 const metodos = require('./datosAleatorios.js');
 const { faker } = require('@faker-js/faker');
+const { json } = require('express');
 
 
 // Insertando datos aleatorios de la coleccion usuarios
@@ -54,9 +55,9 @@ const rol = [];
 for (let i = 1; i < 2001; i++) {
     const roles = {
         id_rol: i,
-        rol: faker.helpers.arrayElements(["Administrador","Empleado","Disenador"],1,1),
-        fecha_Creacion: faker.date.recent(), 
-        estadoo: faker.helpers.arrayElement([true, false], 1, 1),
+        rol: faker.helpers.arrayElement(["Administrador","Empleado","Diseñador"],1,1),
+        fecha_Creacion: JSON.stringify(faker.date.recent()), 
+        estado: faker.helpers.arrayElement([true, false], 1, 1),
     };
     rol.push(roles);
 }
