@@ -49,7 +49,7 @@ db.usuarios.aggregate([
 db.roles.aggregate([
     {
         $group: {
-          _id: "$estadoo",
+          _id: "$estado",
           cantidad: { $sum: 1}
           }
         },
@@ -103,5 +103,3 @@ db.roles.aggregate([{$unwind : "$rol"}]).pretty()
 // Usamos el unwind para convertir un array y devolverlo separado en documentos,
 //pero en la coleccion configuracion no tenemos array, entoces no hace nada la operacion
 db.configuracion.aggregate([{$unwind : "$id_configuracion"}]).pretty()
-
-
