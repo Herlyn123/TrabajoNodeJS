@@ -7,7 +7,7 @@ const uri = "mongodb+srv://herlindavid269:herlin.2004@sena.ahhwqpe.mongodb.net/?
 
 // Insertamos un solo dato en la coleccion usuario, esto seria insertOne
 async function crearPropiedad(nuevaPropiedad){
-    const client = new  MongoClient(uri);
+    const client = new  MongoClient(uri); 
 
     try{
         await client.connect();
@@ -93,11 +93,11 @@ db.getCollection('usuarios').insertMany([
 
 
 // Insertamos 3 datos en la coleccion roles, esto seria insertMany
-use('mi_base');
+use("mi_base");
 db.getCollection('roles').insertMany([
-  { 'id_rol': 2010, 'rol': 'Supervisor', 'fecha_Creacion': '2023-07-21', 'estadoo': true},
-  { 'id_rol': 2011, 'rol': 'Gerente', 'fecha_Creacion': '2023-07-22', 'estadoo': false},
-  { 'id_rol': 2012, 'rol': 'Gerente Mayor', 'fecha_Creacion': '2023-07-23', 'estadoo': true}
+  { 'id_rol': 2010, 'rol': 'Supervisor', 'fecha_Creacion': '2023-07-21', 'estado': true},
+  { 'id_rol': 2011, 'rol': 'Gerente', 'fecha_Creacion': '2023-07-22', 'estado': false},
+  { 'id_rol': 2012, 'rol': 'Gerente Mayor', 'fecha_Creacion': '2023-07-23', 'estado': true}
 ]);
 
 
