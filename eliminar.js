@@ -35,11 +35,11 @@ async function eliminarPropiedad(nombrePropiedad){
         await client.close();
     }
 }
-eliminarPropiedad("Disenador Experto")
+eliminarPropiedad("Diseñador Experto")
 
 
 
-// Eliminamos una propiedad de la coleccion roles
+// Eliminamos una propiedad de la coleccion configuracion
 async function eliminarPropiedad(nombrePropiedad){
     const client = new  MongoClient(uri);
 
@@ -53,7 +53,7 @@ async function eliminarPropiedad(nombrePropiedad){
         await client.close();
     }
 }
-eliminarPropiedad(2027)
+eliminarPropiedad(2010)
 
 
 
