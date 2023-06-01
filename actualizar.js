@@ -38,7 +38,7 @@ async function actualizarPropiedad(nombrePropiedad, campoActualizar){
         await client.close();
     }
 }
-actualizarPropiedad("Disenador", "Disenador Experto")
+actualizarPropiedad("Diseñador", "Diseñador Experto")
 
 
 
@@ -70,7 +70,7 @@ db.usuarios.updateMany({nombre:"Andres", apellido:"Marquez"},{$set:{nombre:"Tade
 
 //Actualizamos dos propiedades de la coleccion roles con updateMany
 use('mi_base');
-db.roles.updateMany({rol:"Gerente Mayor", estadoo:true},{$set:{rol:"Profesor",estadoo:false}});
+db.roles.updateMany({rol:"Gerente Mayor", estado:true},{$set:{rol:"Profesor",estado:false}});
 
 
 //Actualizamos dos propiedades de la coleccion configuracion con updateMany
