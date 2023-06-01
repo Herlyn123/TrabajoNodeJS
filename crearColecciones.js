@@ -49,33 +49,33 @@ db.createCollection("usuarios",{
 
 // Coleccion de roles
 db.createCollection("roles",{
-    validator: {
-      $jsonSchema: {
-        bsonType: "object",
-        title: "Objeto validación de roles",
-        required: ["id_rol", "rol", "fecha_Creacion", "estado"],
-        properties: {
-          id_rol: {
-            bsonType: "int",
-            description: "Identificador unico del rol y es obligatorio",
-          },
-          rol: {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "Objeto validación de roles",
+      required: ["id_rol", "rol", "fecha_Creacion", "estado"],
+      properties: {
+        id_rol: {
+          bsonType: "int",
+          description: "Identificador unico del rol y es obligatorio",
+        },
+        rol: {
+          bsonType: "string",
+          description: "rol es un string y es obligatorio",
+        },
+        fecha_Creacion: {
             bsonType: "string",
-            description: "rol es un string y es obligatorio",
+            description: "Fecha de creacion es un string y es obligatorio",
           },
-          fecha_Creacion: {
-              bsonType: "date",
-              description: "Fecha de creacion es un date y es obligatorio",
-            },
-          estado: {
-            bsonType: "bool",
-            description:
-              "El estado es un bool y es obligatorio",
-          },
+        estado: {
+          bsonType: "bool",
+          description:
+            "El estado es un bool y es obligatorio",
         },
       },
     },
-  });
+  },
+});
 
 
 
